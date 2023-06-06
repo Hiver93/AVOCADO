@@ -389,30 +389,16 @@ Strimzi Kafka Operator
 
 ## 📌  6. Spring Framework Reactive Stack
 
+- User Server에 적용
 - Reactive Stack은 event loop, non-blocking 모델을 기반으로 하여, 더 적은 하드웨어 리소스로 높은 동시성을 처리할 수 있음
 - 이는 Spring MVC에서는 지원하지 않으므로, Spring Web Flux를 이용해야 함
+- 하지만 Reactive Stream의 경우, 직관에서 많이 벗어나는 코드 구조를 사용해야 함
+    
+    → Kotlin Coroutine을 사용해 코드를 작성하면, 직관성 높은 코드를 작성할 수 있음
 
 ## 📌  7. Kafka Streams
 
 - 광고 노출 스트림(KTable)과 클릭 스트림(KStream)의 조인을 통한 click-through-rate 계산
-
-- 프로젝트 정보에 적었던 것
-    
-    ```json
-    "- MSA 환경에서 Kubernetes 도입으로 어플리케이션 별 auto scailing 및 클러스터화 가능
-    - Jenkins, Kustomize, Helm, ArgoCD로 k8s 리소스 관리 및 상태 모니터링
-    - Redis의 Master / Slave 구성으로 R/W 성능 향상
-    - Elasticsearch의 클러스터화를 통한 검색 성능 향상
-    - Kafka Streams를 통한 스트리밍 데이터 실시간 처리
-    - Apache avro와 Confluent Schema Registry로 스키마 변경에 대한 대응
-    - Atomic Design Pattern과 Flux Pattern을 도입하여 프론트엔드 구조 설계
-    - Next.js를 이용한 서버사이드 렌더링(SSR)으로 로딩 시간 단축, 검색엔진 최적화(SEO), 웹 성능 최적화(코드 스플리팅, 레이지 로딩)
-    - Next-Redux-Wrapper 와 RTK, RTK Query를 이용하여 Next.js에서 서버와 브라우저의 상태를 일치시켜 상태 관리를 용이성 제고
-    - TypeScript를 활용하여 타입 안정성을 제고하고, 디버깅 및 팀 작업에서의 편의성을 향상시킴
-    - Next.js의 서버와 브라우저의 상태를 고려하여 Access Token 및 Refresh Token을 활용한 로그인 상태 관리 구현
-    - 토큰을 쿠키에 보관하고, RTK 쿼리의 fetchBaseQuery를 커스텀하여 브라우저 단에서 토큰 상태 검증 및 최신화를 구현
-    - Next.js의 특징인 서버사이드렌더링 과정에서도 페이지 생성 시 토큰의 유효성을 검증하고 최신화할 수 있도록 구현"
-    ```
     
 
 # ⭐   IV. 협업 툴
